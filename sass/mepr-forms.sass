@@ -1,0 +1,67 @@
+/*
+ *
+ *        Forms
+ *
+ **/
+.mp_wrapper .mepr-form
+  +margin-x(5%)
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  .mp-form-row.mepr_price, .mepr_coupon, .have-coupon-link
+    width: 100%!important
+  .have-coupon-link
+    display: block
+  .mepr_spacer
+    display: none
+
+  .mepr_first_name, .mepr_last_name, .mepr_mepr-address-one, .mepr_mepr-address-two, .mepr_mepr-address-city, .mepr_mepr-address-country, .mepr_mepr-address-state, .mepr_mepr-address-zip
+    width: 45%!important
+
+  .mepr_price
+    font-size: 1.3rem
+    text-align: center
+    margin-bottom: 2rem
+
+  #mepr_payment_method
+    display: flex
+    & > .mepr-payment-method
+      justify-content: space-between
+      width: 40%
+
+
+/*
+ *
+ *        Perks displayed before signup
+ *
+ **/
+
+.type-memberpressproduct
+  ul
+    background-image: url('https://cleaner.earth/wp-content/uploads/2019/02/bamboo-2.png')
+    background-repeat: no-repeat
+    background-size: contain
+    list-style: none
+    text-align: center
+    +padding-x(1rem)
+    +padding-y(2rem)
+    width: 100%
+    border-bottom: 3px solid $primary
+    font-size: 1.3rem
+    +margin-x(auto)
+    margin-top: 2rem
+    margin-bottom: 4rem
+
+    li
+      +margin-y(1rem)
+      +margin-x(auto)
+      position: relative
+      width: 50%
+      &::before
+        +setup-pseudo
+        position: absolute
+        left: -1rem
+        border: .7rem solid transparent
+        border-left-color: DarkBlue
+  h1
+    text-align: center

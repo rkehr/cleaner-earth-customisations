@@ -1,0 +1,16 @@
+#masthead #primary-menu
+  .menu-item
+    &::before
+      content: ''
+      width: 70%
+      height: 0%
+      background-color: #c9d439
+      transition: height .2s ease-out
+      position: absolute
+      bottom: 1.5rem
+      left: 1rem
+      z-index: -2
+    &:hover::before, .dropdown-menu:hover ~ .dropdown-toggle::before
+      height: 14%
+    & > a:hover
+      color: #9c9c9c!important

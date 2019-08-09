@@ -1,0 +1,66 @@
+/**----------------------------------------------------------
+  * ---------- PRICE BOXES
+  ----------------------------------------------------------*/
+
+.mepr-price-boxes
+  display: flex
+  justify-content: space-between
+  @media (max-width: 1023px)
+    display: block
+.mepr-price-box
+  margin-top: 3rem !important
+
+
+
+
+div.mepr-price-menu .mepr-price-boxes div.mepr-price-box
+  border-radius: 0
+  padding: 1.2
+  padding-top: 0
+  background-color: #fafafa!important
+  border-left: .3rem solid $primary
+  color: DarkGrey!important
+  //min-height: 45rem
+  position: relative
+  transition: transform .25s ease-out, border-color .5s ease-out
+  transform: rotate(0)
+  &:hover
+    transform: translateY(-.2rem)
+    border-left-color: #ffffea
+  & .mepr-price-box-title
+    +padding-y(2rem)
+    border-bottom: 1px solid #222
+    margin-bottom: .7rem
+
+
+  & .mepr-price-box-price
+    +padding-y(1rem)
+    margin-bottom: .7rem
+    font-weight: 200
+  & .mepr-price-box-button a
+    padding: .5rem
+    +padding-x(1rem)
+  & .mepr-price-box-benefits-item
+    font-weight: 400
+/**----------------------------------------------------------
+  * ---------- HIGHLIGHtED PRICE BOX
+  ----------------------------------------------------------*/
+div.mepr-price-menu.mepr-price-menu.mepr-price-menu.mepr-price-menu.mepr-price-menu .mepr-price-boxes div.mepr-price-box.highlighted
+  background-color: $primary !important
+  color: white!important
+  //min-height: 50rem
+  /*RIBBON FOR THE HIGHLIGHTED BOX*/
+  &::before
+    transition: top .4s ease-out, filter .1s ease-out
+    position: absolute
+    top: -.5rem
+    left: 1rem
+    content: ''
+    width: 0
+    height: 0
+    border: 1.5rem solid DarkBlue
+    border-bottom: 1.7rem solid transparent
+    filter: drop-shadow(3px 3px 2px #444)
+  &:hover::before
+    top: -.8rem
+    filter: drop-shadow(4px 4px 4px #444)

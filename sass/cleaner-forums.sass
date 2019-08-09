@@ -1,0 +1,136 @@
+$cl-climate: #5a5
+$cl-plastics: #9ef
+$cl-takeaction: #B22222
+$cl-projects: #c9d439
+//Background colours
+.bg-climate
+  background-color: $cl-climate
+.bg-plastics
+  background-color: $cl-plastics
+.bg-plastics
+  background-color: $cl-takeaction
+.bg-plastics
+  background-color: $cl-projects
+//Border colours
+.bd-climate
+  border-color: $cl-climate
+.bd-plastics
+  border-color: $cl-plastics
+.bd-takeaction
+  border-color: $cl-takeaction
+.bd-projects
+  border-color: $cl-projects
+//Font-colours
+.ft-climate
+  color: $cl-climate
+.ft-plastics
+  color: $cl-plastics
+.ft-takeaction
+  color: $cl-takeaction
+.ft-projects
+  color: $cl-projects
+
+.clear-add-user-post
+  width: 80%
+  +margin-x(auto)
+  & > *
+    +margin-y(1.5rem)
+    display: block
+  .clear-title
+    width: 60%
+    height: 2rem
+  .clear-text
+    width: 100%
+  input, textarea
+    padding: 4px
+    &, select
+      font-family: inherit
+  input[type="submit"]
+    padding: 0 3rem
+    padding-bottom: 3rem
+
++media-breakpoint-up(lg)
+  .community-posts-container
+    display: inline-block
+    width: 40%
+    +margin-x(auto)
+
+  .community-post
+    +margin-y(3em)
+    +padding-x(2rem)
+    +padding-y(1rem)
+    border-left-width: 3px
+    border-bottom-width: 1px
+    border-style: solid
+    .community-post-author
+      font-size: 1em
+
+.clear-add-post-modal-btn
+  min-width: 50%
+  line-height: normal
+  border-radius: 0
+  display: block
+  font-size: 2rem
+  margin: 1rem auto
+
+.community-post
+  display: block
+  width: 100%
+  border-top: none
+  border-right: none
+  background: none
+  text-align: left
+
+.community-filter-container
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  margin-top: 3rem
+  margin-bottom: 3rem
+  .community-filter
+    padding-top: 2rem
+    position: relative
+    text-align: center
+    border-width: 2px
+    border-style: solid
+    width: 10rem
+    height: 10rem
+    border-radius: 50%
+    & .dashicons
+      width: 2rem
+      font-size: 2rem
+    & h3
+      font-size: 1.5rem
+      line-height: 3.5rem
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      content: ''
+      width: 100%
+      height: 100%
+      border: 1px solid black
+      border-color: inherit
+      border-radius: 50%
+      opacity: 50%
+      transition: width .35s ease-in-out, height .2s ease-in-out, left .2s ease-in-out, top .2s ease-in-out
+    &:hover
+      cursor: pointer
+    &:hover::before
+      width: 95%
+      height: 95%
+      left: 2.5%
+      top: 2.5%
+    &.active::before
+      width: 85%
+      height: 85%
+      left: 7.5%
+      top: 7.5%
+      transition: width .2s ease-in-out, left .3s ease-out
+    &.active:hover::before
+      width: 80%
+      height: 80%
+      left: 10%
+      top: 10%
+      transition: height .12s ease-in, top .15s ease-in-out
